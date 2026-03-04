@@ -582,7 +582,19 @@ footer {
   :root { --radius:14px; --radius-sm:8px; }
   body { font-size:14px; }
   .nav-links, .nav-cta { display:none; }
-  .nav-hamburger { display:flex; }
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--black2);
+    padding: 100px 6%;
+    z-index: 250;
+    gap: 30px;
+    font-size: 1.5rem;
+  }
+  .nav-links.active a { font-size: 1.2rem; }
+  .nav-hamburger { display:flex; position: relative; z-index: 300; }
   .hero { padding:110px 4% 60px; }
   h1.hero-title { font-size:2.2rem; }
   .prob-wrap, .feat-header { grid-template-columns:1fr; gap:40px; }
